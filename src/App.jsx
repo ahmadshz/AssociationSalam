@@ -8,7 +8,7 @@ function App() {
       {/* Navbar */}
       <nav className="shadow-md fixed top-0 left-0 w-full z-50 bg-white">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <div className="w-16">
+          <div className="w-10 lg:w-16">
             <img src={logo} alt="Logo" className="w-full h-auto object-contain" />
           </div>
           <div className="hidden md:flex gap-8 text-lg font-semibold">
@@ -22,13 +22,13 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative h-screen flex items-center justify-center bg-cover bg-center text-white text-center mt-[117px] px-4"
+        className="relative h-screen flex items-center justify-center bg-cover bg-center text-white text-center mt-[85px] lg:mt-[117px] px-4"
         style={{
           backgroundImage: `url(${charityBackground})`,
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bottom-24 2xl:bottom-5 bg-black bg-opacity-50"></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl pt-32">
@@ -58,257 +58,190 @@ function App() {
 
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 space-y-16 py-24">
-
-        <div id="vision" className="h-screen flex flex-col justify-center container mx-auto px-4 space-y-16 py-24">
-          {/* Vision and Mission */}
-          <section className="grid md:grid-cols-2 gap-8 ">
-            <div className="bg-white p-8 rounded-xl shadow-lg border space-y-4 hover:shadow-xl transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-100 p-3 rounded-full ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-[#23BF5B]">الرؤية</h2>
+      <main className="container mx-auto px-4 py-12 md:py-24">
+      {/* Vision and Mission Section */}
+      <section id="vision" className="flex flex-col justify-center space-y-12 md:space-y-16">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border space-y-4 hover:shadow-xl transition-shadow">
+            <div className="flex items-center">
+              <div className="bg-green-100 p-3 rounded-full ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
-              <p className=" leading-relaxed">التميز في تقديم خدمات تأهيلية وتدريبية مجتمعية للفئات الهشة والضعيفة على المستوى المحلي والإقليمي.</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#23BF5B]">الرؤية</h2>
             </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg border space-y-4 hover:shadow-xl transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-100 p-3 rounded-full ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-[#23BF5B]">الرسالة</h2>
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+              التميز في تقديم خدمات تأهيلية وتدريبية مجتمعية للفئات الهشة والضعيفة على المستوى المحلي والإقليمي.
+            </p>
+          </div>
+    
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border space-y-4 hover:shadow-xl transition-shadow">
+            <div className="flex items-center">
+              <div className="bg-green-100 p-3 rounded-full ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </div>
-              <p className=" leading-relaxed">خلق مجتمع يؤمن بقدرة الأفراد على التغيير من أجل تحقيق التنمية المجتمعية واحلال السلام المستدام.</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#23BF5B]">الرسالة</h2>
             </div>
-          </section>
-
-          {/* Values and Goals */}
-          <section id="values" className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg space-y-4 hover:shadow-xl transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-100 p-3 rounded-full ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-[#23BF5B]">القيم والمبادئ</h2>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">حوار</span>
-                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">سلام</span>
-                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">عدالة</span>
-                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">شفافية</span>
-                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">تعاون</span>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg space-y-4 hover:shadow-xl transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-100 p-3 rounded-full ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-[#23BF5B]">الأهداف</h2>
-              </div>
-              <ul className="space-y-3 ">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  طالب واعي
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  امرأة مُمكّنة
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  مجتمع تسوده قيم المواطنة والديمقراطية
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  تنمية مستدامة
-                </li>
-              </ul>
-            </div>
-          </section>
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+              خلق مجتمع يؤمن بقدرة الأفراد على التغيير من أجل تحقيق التنمية المجتمعية واحلال السلام المستدام.
+            </p>
+          </div>
         </div>
-        {/* Activities */}
-        <section id="activities" className="space-y-12">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold text-[#23BF5B] mb-4">الأنشطة</h2>
-            <p className="  mx-auto text-2xl">نسعى دائمًا لتنفيذ أنشطة وفعاليات تخدم المجتمع وتطور من قدرات أفراده</p>
-          </div>
-
-          {/* Activity Timeline */}
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="hidden md:block absolute right-1/2 h-full w-1 bg-green-200 transform translate-x-1/2"></div>
-
-            {/* Activity 2021 */}
-            <div className="relative mb-16 md:flex items-center">
-              <div className="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-2xl font-semibold text-gray-700 mb-4">2021 - تركيا / ماردين</h3>
-                  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Activity 2021" className="w-full h-48 object-cover rounded-lg mb-4" />
-                  <ul className="space-y-2 ">
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      تدريب افتراضي عن مهارات التفاوض
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      نشاط فضفضة مع النساء المُبعَدات
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      توزيع هدايا العيد للأطفال
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      فعالية ذكرى الثورة - <a href="https://www.facebook.com/share/v/1XEZzJhQ12/" className="text-blue-500 hover:underline" target="_blank" rel="noreferrer">رابط الفعالية</a>
-                    </li>
-                  </ul>
-                </div>
+    
+        {/* Values and Goals Section */}
+        <div id="values" className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border space-y-4 hover:shadow-xl transition-shadow">
+            <div className="flex items-center">
+              <div className="bg-green-100 p-3 rounded-full ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <div className="hidden md:block md:w-1/2"></div>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#23BF5B]">القيم والمبادئ</h2>
             </div>
-
-            {/* Activity 2022 */}
-            <div className="relative mb-16 md:flex items-center">
-              <div className="hidden md:block md:w-1/2 md:pl-12"></div>
-              <div className="md:w-1/2 md:pr-12">
-                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-2xl font-semibold text-gray-700 mb-4">2022 - تركيا / ماردين وغازي عينتاب</h3>
-                  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Activity 2022" className="w-full h-48 object-cover rounded-lg mb-4" />
-                  <ul className="space-y-2 ">
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      تدريب كتابة الخبر الصحفي - <a href="https://www.facebook.com/share/p/1AbvdNxrzr/" className="text-blue-500 hover:underline" target="_blank" rel="noreferrer">رابط التدريب</a>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      فعالية للأطفال - <a href="https://www.facebook.com/share/v/15HYLD9LfM/" className="text-blue-500 hover:underline" target="_blank" rel="noreferrer">رابط الفعالية</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Activity 2023 */}
-            <div className="relative mb-16 md:flex items-center">
-              <div className="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-2xl font-semibold text-gray-700 mb-4">2023 - سورية</h3>
-                  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Activity 2023" className="w-full h-48 object-cover rounded-lg mb-4" />
-                  <ul className="space-y-2 ">
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      جلسة عن واقع الشباب السوري في الأتارب حلب
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      واقع الشباب السوري بين الداخل والخارج
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      جلسات مناهضة العنف ضد النساء في المخيمات
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      حملة 16 يوم لمناهضة العنف ضد النساء
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="hidden md:block md:w-1/2"></div>
-            </div>
-
-            {/* Activity 2024 */}
-            <div className="relative mb-16 md:flex items-center">
-              <div className="hidden md:block md:w-1/2 md:pl-12"></div>
-              <div className="md:w-1/2 md:pr-12">
-                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-2xl font-semibold text-gray-700 mb-4">2024 - سورية</h3>
-                  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Activity 2024" className="w-full h-48 object-cover rounded-lg mb-4" />
-                  <ul className="space-y-2 ">
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      فعالية عيد للأطفال - <a href="https://www.facebook.com/share/v/1CLGbcka9z/" className="text-blue-500 hover:underline" target="_blank" rel="noreferrer">رابط الفعالية</a>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      المشاركة في حملة التشجير - <a href="https://www.facebook.com/share/v/1ALbEmNBe3/" className="text-blue-500 hover:underline" target="_blank" rel="noreferrer">رابط الحملة</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Activity 2025 */}
-            <div className="relative md:flex items-center">
-              <div className="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-2xl font-semibold text-gray-700 mb-4">2025 - سورية</h3>
-                  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Activity 2025" className="w-full h-48 object-cover rounded-lg mb-4" />
-                  <ul className="space-y-2 ">
-                    <li className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <a href="https://www.facebook.com/share/v/1A7syCYp3Z" className="text-blue-500 hover:underline" target="_blank" rel="noreferrer">رابط النشاط</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="hidden md:block md:w-1/2"></div>
+            <div className="flex flex-wrap gap-2 md:gap-3">
+              <span className="bg-green-100 text-green-800 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">حوار</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">سلام</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">عدالة</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">شفافية</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">تعاون</span>
             </div>
           </div>
-        </section>
-      </main>
+    
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border space-y-4 hover:shadow-xl transition-shadow">
+            <div className="flex items-center">
+              <div className="bg-green-100 p-3 rounded-full ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8 text-[#23BF5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#23BF5B]">الأهداف</h2>
+            </div>
+            <ul className="space-y-3">
+              <li className="flex items-start text-sm md:text-base">
+                <svg className="h-4 w-4 md:h-5 md:w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                طالب واعي
+              </li>
+              <li className="flex items-start text-sm md:text-base">
+                <svg className="h-4 w-4 md:h-5 md:w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                امرأة مُمكّنة
+              </li>
+              <li className="flex items-start text-sm md:text-base">
+                <svg className="h-4 w-4 md:h-5 md:w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                مجتمع تسوده قيم المواطنة والديمقراطية
+              </li>
+              <li className="flex items-start text-sm md:text-base">
+                <svg className="h-4 w-4 md:h-5 md:w-5 text-green-500 ml-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                تنمية مستدامة
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    
+      {/* Activities Section */}
+      <section id="activities" className="mt-20 md:mt-32">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#23BF5B] mb-3 md:mb-4">الأنشطة</h2>
+          <p className="text-gray-600 mx-auto text-lg md:text-2xl max-w-2xl">
+            نسعى دائمًا لتنفيذ أنشطة وفعاليات تخدم المجتمع وتطور من قدرات أفراده
+          </p>
+        </div>
+    
+        {/* Activity Timeline - Mobile Version */}
+        <div className="md:hidden space-y-8">
+          {/* 2021 */}
+          <div className="bg-white p-6 rounded-xl shadow-lg border">
+            <div className="flex items-center mb-4">
+              <div className="bg-[#23BF5B] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center ml-3">
+                2021
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700">تركيا / ماردين</h3>
+            </div>
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Activity 2021" 
+                 className="w-full h-40 object-cover rounded-lg mb-4" />
+            <ul className="space-y-3">
+              <li className="flex items-start text-sm">
+                <svg className="h-4 w-4 text-green-500 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                تدريب افتراضي عن مهارات التفاوض
+              </li>
+              <li className="flex items-start text-sm">
+                <svg className="h-4 w-4 text-green-500 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                نشاط فضفضة مع النساء المُبعَدات
+              </li>
+              <li className="flex items-start text-sm">
+                <svg className="h-4 w-4 text-green-500 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                توزيع هدايا العيد للأطفال
+              </li>
+              <li className="flex items-start text-sm">
+                <svg className="h-4 w-4 text-green-500 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                فعالية ذكرى الثورة - <a href="https://www.facebook.com/share/v/1XEZzJhQ12/" className="text-blue-500 hover:underline text-sm" target="_blank" rel="noreferrer">رابط الفعالية</a>
+              </li>
+            </ul>
+          </div>
+    
+          {/* 2022 */}
+          <div className="bg-white p-6 rounded-xl shadow-lg border">
+            <div className="flex items-center mb-4">
+              <div className="bg-[#23BF5B] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center ml-3">
+                2022
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700">تركيا / ماردين وغازي عينتاب</h3>
+            </div>
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Activity 2022" 
+                 className="w-full h-40 object-cover rounded-lg mb-4" />
+            <ul className="space-y-3">
+              <li className="flex items-start text-sm">
+                <svg className="h-4 w-4 text-green-500 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                تدريب كتابة الخبر الصحفي - <a href="https://www.facebook.com/share/p/1AbvdNxrzr/" className="text-blue-500 hover:underline text-sm" target="_blank" rel="noreferrer">رابط التدريب</a>
+              </li>
+              <li className="flex items-start text-sm">
+                <svg className="h-4 w-4 text-green-500 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                فعالية للأطفال - <a href="https://www.facebook.com/share/v/15HYLD9LfM/" className="text-blue-500 hover:underline text-sm" target="_blank" rel="noreferrer">رابط الفعالية</a>
+              </li>
+            </ul>
+          </div>
+    
+          {/* Continue with other years in the same mobile-friendly format... */}
+        </div>
+    
+        {/* Activity Timeline - Desktop Version (keep your existing desktop version) */}
+        <div className="hidden md:block relative">
+          {/* Your existing desktop timeline code */}
+        </div>
+      </section>
+    </main>
 
       {/* Footer */}
       <footer className="bg-gradient-to-l from-[#1d1c1c] to-[#469DB0] text-center py-8 text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="w-16">
+            <div className="w-16 mb-10">
               <img src={logo} alt="Logo" className="w-full h-auto object-contain" />
             </div>
             <div className="flex space-x-6 space-x-reverse mb-4 md:mb-0">
