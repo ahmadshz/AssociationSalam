@@ -8,6 +8,8 @@ import Hero from "./Component/Hero";
 import AboutUs from "./Component/AboutUs";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { IoClose } from "react-icons/io5";
+import {motion} from "framer-motion";
+
 
 // Animation variants
 const containerVariants = {
@@ -33,6 +35,7 @@ const itemVariants = {
     }
   }
 };
+
 
 const slideInFromRight = {
   hidden: { x: 100, opacity: 0 },
